@@ -18,7 +18,7 @@ const linearGradient = props => {
         <span>{data.min}</span>
         <span className="flex-grow-1"></span>
         <span>{data.max}</span>
-        {console.log(data.min)}
+       
       </div>
       <div style={{ ...boxStyle, ...gradientStyle }} className=""></div>
     </div>

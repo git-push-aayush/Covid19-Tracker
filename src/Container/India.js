@@ -29,18 +29,18 @@ class India extends Component{
                   this.setState({ region_code:response.data.region_code , 
                                   region_name:response.data.region_name
                                   });
-                console.log(this.state.region_code+" " + this.state.region_name);
+               // console.log(this.state.region_code+" " + this.state.region_name);
              });
         axios.get("https://cors-anywhere.herokuapp.com/https://covid-19-status-tracker.herokuapp.com/india")
             .then(response=>{
                const total=response.data[0];
                const state=response.data.slice(1,response.data.length);
-               console.log(state)
+               //console.log(state)
                this.setState({
                    states:state , total:total , isResponse:true
                });
-               console.log(this.state.states);
-               console.log(this.state.total);
+              // console.log(this.state.states);
+              // console.log(this.state.total);
                
            });
     }
@@ -76,14 +76,19 @@ class India extends Component{
         return(
            
            <div>
-               <Cards heading="India" confirmed={this.state.total.total_confirmed} 
+              <div className='row' id='cards-outer-row'>
+              <Cards heading="India" confirmed={this.state.total.total_confirmed} 
                       active={this.state.total.total_active} recovered={this.state.total.total_recovered}
                       death={this.state.total.total_death}/>
-                {located_state}      
+                {located_state} 
+              </div>
+              
+
+
                <section className="data">
                 <div className="row">
                  <div className="col-lg-6">
-                   <DataTable Data={tableData} isAvailable={this.state.isResponse}/>
+                   <DataTable Data={tableData} isAvailable={this.state.isResponse} firstCol="States"/>
                  </div>
                   
                  <div className="col-lg-6">

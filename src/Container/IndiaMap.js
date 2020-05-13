@@ -49,7 +49,7 @@ const IndiaMap =(props) =>{
         toColor: COLOR_RANGE[COLOR_RANGE.length - 1],
         min: 0,
         max: data.reduce((max, item) =>{
-            console.log("dd "+max);   
+               
             return (item.confirmed > max ? item.confirmed : max);
         }, 0)
       };
@@ -68,15 +68,15 @@ const IndiaMap =(props) =>{
     };
   
     return (
-        <div className=" container">
+        <div >
          
           <ReactTooltip>{tooltipContent}</ReactTooltip>
             <ComposableMap
               projectionConfig={PROJECTION_CONFIG}
-              
+              viewBox={"10 0 220 240"}
               projection="geoMercator"
-              width={600}
-              height={320}
+              width={220}
+              height={240}
               data-tip=""
             >
               <Geographies geography={INDIA_TOPO_JSON} className="states">
@@ -99,7 +99,7 @@ const IndiaMap =(props) =>{
               </Geographies>
             </ComposableMap>
             
-            
+            <LinearGradient data={gradientData}/>
         </div>
       );  
    }else{

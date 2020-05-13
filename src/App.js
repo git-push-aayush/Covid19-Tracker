@@ -10,8 +10,9 @@ class App extends Component {
  render(){
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-       <Link className="navbar-brand" to="/">Covid-19 Tracker</Link>
+      <header className="header">
+      <nav className="navbar navbar-expand-lg">
+       <Link className="navbar-brand" to="/"><i className="fas fa-virus"></i> Covid-19 Tracker</Link>
        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
        <span className="navbar-toggler-icon"></span>
       </button>
@@ -24,13 +25,20 @@ class App extends Component {
       </div>
       </div>
       </nav>
+
+      </header>
+      
       <Route path='/' exact  component={India}/>
       <Switch>
       <Route path='/world-stats'  component={World}/>
       <Route path='/covid19-detector'  component={World}/>
       <Route path='/helpful-links'  component={HelpfulLinks}/>
       </Switch>
-      
+      <footer className="footer">
+      <i className="fas fa-2x fa-virus"></i>
+        <p>Covid-19 Tracker</p>
+        <p>Made with <span role="img" aria-labelledby="heart">❤️</span> in India</p>
+      </footer>
     </div>
   );
 }

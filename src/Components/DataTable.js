@@ -2,6 +2,9 @@ import React , {Component} from 'react';
 import $ from 'jquery';
 import 'datatables.net';
 let table;
+const tableStyle={ width : "100%" , alignItems:"center" }
+
+
 class dataTable extends Component{
     render(){
         
@@ -21,14 +24,14 @@ class dataTable extends Component{
         }
        
         return(
-            <div className="col-lg-6">
-            <table id="example" className="display" >
+            
+            <table id="example" className="display table-responsive-sm compact" style={tableStyle} >
              <thead>
                  <tr>
-                     <th>State</th>
-                     <th>Confirmed</th>
+                     <th>{this.props.firstCol}</th>
+                     <th>Confirm</th>
                      <th>Active</th>
-                     <th>Recovered</th>
+                     <th>Recover</th>
                      <th>Death</th>
                      
                  </tr>
@@ -36,7 +39,7 @@ class dataTable extends Component{
              
              </table>
              
-            </div>
+        
          );
 
     }

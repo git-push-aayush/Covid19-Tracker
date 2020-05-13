@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+.header{
+  padding: 0.5% 4%;
+  background-image:linear-gradient(to left , #00ccff , #33ccff);
+  
+
+}
+
+.nav-item , .navbar-brand{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer{
+  text-align: center;
+  padding : 2% 0 1%;
+  margin-top: 3%;
+  background-image:linear-gradient(to left , #33ccff , #00ccff); 
+}
+ /* helpful link css */
+.link-h { 
+  padding: 2% 4% 0%;
+  width: auto;
+}
+
+#links {
+  padding: 3%;
+  text-align: center;
+}
