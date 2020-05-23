@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Covid-19 spread tracker in india State-wise and world <br/>
+<br/>
+Api-Scrapper Repository:https://github.com/git-push-aayush/Corona-Api-Scrapper
+   Data source <br/>
+      India:https://www.mohfw.gov.in/  <br/>
+      World:https://www.worldometers.info/coronavirus <br/>
+  
+   Api Link <br/>
+      India:https://covid-19-status-tracker.herokuapp.com/india   <br/>
+      World:https://covid-19-status-tracker.herokuapp.com/world   <br/>
 
+Made for learning purpose.
 ## Available Scripts
 
 In the project directory, you can run:
